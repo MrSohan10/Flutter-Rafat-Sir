@@ -6,79 +6,150 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-  int _currentIndex = 1;
-  mySnackbar(message, context) {
-    return ScaffoldMessenger.of(context)
-        .showSnackBar(SnackBar(content: Text(message)));
-  }
-
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Scaffold(
-          appBar: AppBar(
-            title: Text('Home'),
-          ),
-          body: Center(
-              child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-              ElevatedButton(
-              style: ElevatedButton.styleFrom(
-              padding: EdgeInsets.all(20),
-              backgroundColor: Colors.pink,
-              textStyle:
-              TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-              shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(20))),
-          onPressed: () {
-            mySnackbar('sohan', context);
-          },
-          child: Text('Button')),
-      TextButton(
-          style: TextButton.styleFrom(
-              padding: EdgeInsets.all(20),
-              foregroundColor: Colors.teal,
-              textStyle: TextStyle(
-                fontSize: 20,
-              )),
-          onPressed: () {},
-          child: Text('Forword')),
-      IconButton(
-          style: IconButton.styleFrom(),
-          iconSize: 50,
-          onPressed: () {},
-          icon: Icon(
-            Icons.person,
-          )),
-      Padding(
-        padding: const EdgeInsets.all(8.0),
-        child: TextField(
-          decoration: InputDecoration(
-              border:
-              OutlineInputBorder(borderRadius: BorderRadius.circular(10)),
-              suffixIcon: Icon(Icons.mail),
-          hintText: 'Enter your email',
-              label: Text("Enter mail")
-          ),
+        home: Scaffold(
+      appBar: AppBar(
+        title: Text('Home'),
+      ),
+      body: Scrollbar(
+        isAlwaysShown: true,
+        thickness: 20,
+        radius: Radius.circular(10),
+        child: ListView(
+          children: [
+            ListTile(
+              leading: Icon(
+                Icons.flutter_dash,
+                size: 50,
+              ),
+              title: Text('Flutter'),
+              subtitle: Text('Learning flutter'),
+              trailing: Icon(
+                Icons.arrow_right_alt,
+                size: 30,
+              ),
+              iconColor: Colors.blue,
+              onTap: (){print('flutter');},
+            ),
+            Divider(
+              height: 10,
+              color: Colors.blue,
+              thickness: 5,
+              indent: 20,
+              endIndent: 20,
+
+            ),
+            ListTile(
+              leading: Icon(
+                Icons.flutter_dash,
+                size: 50,
+              ),
+              title: Text('Flutter'),
+              subtitle: Text('Learning flutter'),
+              trailing: Icon(
+                Icons.arrow_right_alt,
+                size: 30,
+              ),
+              iconColor: Colors.blue,
+              onTap: (){print('flutter');},
+            ),
+            ListTile(
+              leading: Icon(
+                Icons.flutter_dash,
+                size: 50,
+              ),
+              title: Text('Flutter'),
+              subtitle: Text('Learning flutter'),
+              trailing: Icon(
+                Icons.arrow_right_alt,
+                size: 30,
+              ),
+              iconColor: Colors.blue,
+              onTap: (){print('flutter');},
+            ),
+            ListTile(
+              leading: Icon(
+                Icons.flutter_dash,
+                size: 50,
+              ),
+              title: Text('Flutter'),
+              subtitle: Text('Learning flutter'),
+              trailing: Icon(
+                Icons.arrow_right_alt,
+                size: 30,
+              ),
+              iconColor: Colors.blue,
+              onTap: (){print('flutter');},
+            ),
+            Text("i'm Sohan"),
+            Text("i'm Sohan"),
+            Text("i'm Sohan"),
+            Text("i'm Sohan"),
+            Text("i'm Sohan"),
+            Text("i'm Sohan"),
+            Text("i'm Sohan"),
+            Text("i'm Sohan"),
+            Text("i'm Sohan"),
+            Text("i'm Sohan"),
+            Text("i'm Sohan"),
+            Text("i'm Sohan"),
+            Text("i'm Sohan"),
+            Text("i'm Sohan"),
+            Text("i'm Sohan"),
+            Text("i'm Sohan"),
+            Text("i'm Sohan"),
+            Text("i'm Sohan"),
+            Text("i'm Sohan"),
+            Text("i'm Sohan"),
+            Text("i'm Sohan"),
+            Text("i'm Sohan"),
+            Text("i'm Sohan"),
+            Text("i'm Sohan"),
+            Text("i'm Sohan"),
+            Text("i'm Sohan"),
+            Text("i'm Sohan"),
+            Text("i'm Sohan"),
+            Text("i'm Sohan"),
+            Text("i'm Sohan"),
+            Text("i'm Sohan"),
+            Text("i'm Sohan"),
+            Text("i'm Sohan"),
+            Text("i'm Sohan"),
+            Text("i'm Sohan"),
+            Text("i'm Sohan"),
+            Text("i'm Sohan"),
+            Text("i'm Sohan"),
+            Text("i'm Sohan"),
+            Text("i'm Sohan"),
+            Text("i'm Sohan"),
+            Text("i'm Sohan"),
+            Text("i'm Sohan"),
+            Text("i'm Sohan"),
+            Text("i'm Sohan"),
+            Text("i'm Sohan"),
+            Text("i'm Sohan"),
+            Text("i'm Sohan"),
+            Text("i'm Sohan"),
+            Text("i'm Sohan"),
+            Text("i'm Sohan"),
+            Text("i'm Sohan"),
+            Text("i'm Sohan"),
+            Text("i'm Sohan"),
+            Text("i'm Sohan"),
+            Text("i'm Sohan"),
+            Text("i'm Sohan"),
+            Text("i'm Sohan"),
+            Text("i'm Sohan"),
+            Text("i'm Sohan"),
+            Text("i'm Sohan"),
+            Text("i'm Sohan"),
+            Text("i'm Sohan"),
+            Text("i'm Sohan"),
+            Text("i'm Sohan"),
+          ],
         ),
       ),
-      Padding(
-        padding: const EdgeInsets.all(8.0),
-        child: TextField(
-          decoration: InputDecoration(
-              border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(10)),
-              suffixIcon: Icon(Icons.password),
-              hintText: 'Enter your password',
-            label: Text("Enter password")
-
-          ),
-
-        ),
-      ),
-
-    ],
-    )),
     ));
   }
 }
